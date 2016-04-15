@@ -17,6 +17,7 @@ class PriorityQueueArrayList<E extends Comparable<E>> implements IntPriority_Que
     public PriorityQueueArrayList(){
         data = new ArrayList<E>();
     }
+
     public PriorityQueueArrayList(Comparator<E> comp)
     {
         data = new ArrayList<E>();

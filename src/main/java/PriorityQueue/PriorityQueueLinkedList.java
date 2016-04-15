@@ -18,7 +18,7 @@ public class PriorityQueueLinkedList<E extends Comparable<E>> implements IntPrio
 
     public PriorityQueueLinkedList() {
         data = new LinkedList<E>();
-        comparator = null
+        comparator = null;
     }
 
     /**
