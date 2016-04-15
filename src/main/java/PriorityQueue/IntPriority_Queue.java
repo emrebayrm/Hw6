@@ -7,7 +7,7 @@ package PriorityQueue;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public interface IntPriority_Queue<E> {
+public interface IntPriority_Queue<E extends Comparable <E>> {
     /**
      * Adds New Element to Queue
      * @param element

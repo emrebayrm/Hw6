@@ -1,7 +1,5 @@
 package PriorityQueue;
 
-import PriorityQueue.IntPriority_Queue;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -12,7 +10,7 @@ import java.util.Random;
 public class PriorityQueueTest {
     public static void main(String[] argv)
      {
-         Priority_Queue<Integer> queue = new Priority_Queue<Integer>();
+         PriorityQueueArrayList<Integer> queue = new PriorityQueueArrayList<Integer>();
          ArrayList<Integer> testresult = new ArrayList<Integer>();
 
          System.out.println("Testing with 10 elem ");
@@ -51,7 +49,7 @@ public class PriorityQueueTest {
          }
      }
 
-    private static void Test(Priority_Queue queue,int testsize)
+    private static void Test(PriorityQueueArrayList queue, int testsize)
     {
         Random rand = new Random();
         for (int i = 0; i < testsize; ++i)
