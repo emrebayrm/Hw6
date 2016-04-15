@@ -1,3 +1,7 @@
+package PriorityQueue;
+
+import PriorityQueue.IntPriority_Queue;
+
 import java.util.Random;
 
 /**

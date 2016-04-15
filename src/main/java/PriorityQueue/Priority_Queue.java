@@ -1,8 +1,15 @@
+package PriorityQueue;
+
 /**
- * Created by emre on 4/12/16.
+ * Created by emre on 4/15/16.
  */
-import java.util.*;
-public class Priority_Queue<E extends Comparable<E>> implements IntPriority_Queue<E>{
+import java.util.ArrayList;
+import java.util.Comparator;
+/**
+ * It creates Priority queue with your comparator or it use class' comparaTo method
+ * @param <E>
+ */
+class Priority_Queue<E extends Comparable<E>> implements IntPriority_Queue<E>{
 
     private ArrayList<E> data;
     private Comparator<E> comp;
