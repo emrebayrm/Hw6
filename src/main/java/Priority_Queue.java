@@ -18,53 +18,59 @@ public class Priority_Queue<E extends Comparable<E>> implements IntPriority_Queu
 
     private int compare(E left, E right)
     {
-        return 0;
-    }
-
-    private void swap(int i , int j)
-    {
-
+        if ( comp != null)
+            return comp.compare(left,right);
+        return left.compareTo(right);
     }
 
     public boolean offer(E element) {
-        data.add(element);
-        int child = data.size() - 1;
-        int parent = (child - 1) / 2;
-
-        while (parent >= 0 && compare(data.get(parent),data.get(child)) > 0 )
+        if(data.size() == 0)
+            data.add(element);
+        else if (data.size() == 1)
         {
-            swap(parent,child);
-            child = parent;
-            parent = (child - 1) / 2 ;
+            if(compare(data.get(0),element) >= 0)
+                data.add(element);
+            else
+                data.add(0,element);
+        }
+        else{
+            int i = 0;
+            boolean flag = false;
+            while(!flag ){
+                if(i >= data.size())
+                {
+                    flag = true;
+                    data.add(element);
+                }
+                else if(compare(element,data.get(i)) >= 0)
+                {
+                    data.add(i,element);
+                    flag = true;
+                }
+
+
+                ++i;
+            }
         }
         return true;
     }
 
     public E remove(E element) {
+        data.remove(element);
         return null;
     }
 
     public E poll() {
         if(data.size() == 0)
             return null;
-        E res = data.get(0);
-
-        // sadece bir eleman varsa
-        if(data.size() == 1)
-        {
-            data.remove(0);
-            return res;
-        }
-
-        data.set(0,)
-
+        return data.remove(data.size() - 1);
     }
 
     public E peek() {
-        return null;
+        return data.get(data.size() - 1);
     }
 
     public E element() {
-        return null;
+        return peek();
     }
 }
